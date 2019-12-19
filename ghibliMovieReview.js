@@ -18,39 +18,31 @@ document.addEventListener("DOMContentLoaded", () => {
             console.log(err)
         }
     }
-    
     fetchData()
 
     const popMovieSelect = (data) => {
         data.forEach(movie => {
             let option = document.createElement("option")
             option.innerText = movie.title
-            option.value = movie.title
+            option.value = movie.url
             select.appendChild(option)
         })
     }
 
-    select.addEventListener("change", (select) => {
+    select.addEventListener("change", () => {
         title.innerText = ""
         release.innerText = ""
         description.innerText = ""
-        console.log(select)
         movieInfo(select.value)
     })
 
-    const movieInfo = async (selection) => {
+    const movieInfo = (url) => {
         try {
-            let res = await axios.get("https://ghibliapi.herokuapp.com/films")
+            let res = axios.get(url)
             let movieContent = res.data
-            movieContent.forEach(movie => {
-                if(movie.title === selection){
-                    title.innerText = movie.title
-                    release.innerText = movie.release_date
-                    description.innerText = movie.description
-                  
-                }
-            debugger
-            })
+            title.innerText = movieContent.title
+            release.innerText = movieContent.release_date
+            description.innerText = movieContent.description
         }catch(err) {
             console.log(err)
         }
@@ -63,8 +55,5 @@ document.addEventListener("DOMContentLoaded", () => {
         revList.appendChild(li)
         form.reset()
     })
-
-
-
 
 })
