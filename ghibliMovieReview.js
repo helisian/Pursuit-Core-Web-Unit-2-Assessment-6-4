@@ -29,17 +29,18 @@ document.addEventListener("DOMContentLoaded", () => {
         })
     }
 
-    select.addEventListener("change", () => {
+    select.addEventListener("change", (event) => {
         title.innerText = ""
         release.innerText = ""
         description.innerText = ""
-        movieInfo(select.value)
+        movieInfo(event.currentTarget.value)
     })
 
-    const movieInfo = (url) => {
+    const movieInfo = async (url) => {
         try {
-            let res = axios.get(url)
+            let res = await axios.get(url)
             let movieContent = res.data
+            console.log(res.data)
             title.innerText = movieContent.title
             release.innerText = movieContent.release_date
             description.innerText = movieContent.description
