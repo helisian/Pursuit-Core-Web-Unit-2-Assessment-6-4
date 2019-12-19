@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ghibli Movie Review</title>
+    <link rel="stylesheet" href="./ghibliMovieReview.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./ghibliMovieReview.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img id="logo" src="https://upload.wikimedia.org/wikipedia/en/thumb/c/ca/Studio_Ghibli_logo.svg/1200px-Studio_Ghibli_logo.svg.png"/>
+        </div>
+        <div class="title">
+        <h1>GHIBLI REVIEW APP</h1>
+        </div>
+    </header>
+    <main class="main">
+        <div>
+        <select class="select">
+            <option value="" selected disabled>Choose a Movie</option>
+        </select>
+        </div>
+        <div class="Movie">
+            <h3 id="title"></h3>
+            <p id="release"></p>
+            <p id="description"></p>
+        </div>
+        <form action="" class="form"> 
+            <input id="review" type="text" name="task" placeholder="Enter Your Shining Review">
+            <input class="submit" type="submit" value="Submit Review">
+        </form>
+        <div>
+        <ul class="revList">REVIEWS</ul>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>
