@@ -2,8 +2,8 @@ document.addEventListener("DOMContentLoaded", () => {
     
     let select = document.querySelector(".select")
     let form = document.querySelector(".form")
-    let review = document.querySelector("#review")
-    let revList = document.querySelector(".revList")
+    let reviewSubmission = document.querySelector("#reviewSubmission")
+    let reviewList = document.querySelector(".reviewList")
     let title = document.querySelector("#title")
     let release = document.querySelector("#release")
     let description = document.querySelector("#description")
