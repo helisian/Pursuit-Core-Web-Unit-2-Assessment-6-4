@@ -33,6 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
         title.innerText = ""
         release.innerText = ""
         description.innerText = ""
+        reviewList.innerText = ""
         movieInfo(event.currentTarget.value)
     })
 
@@ -40,7 +41,6 @@ document.addEventListener("DOMContentLoaded", () => {
         try {
             let res = await axios.get(url)
             let movieContent = res.data
-            console.log(res.data)
             title.innerText = movieContent.title
             release.innerText = movieContent.release_date
             description.innerText = movieContent.description
@@ -52,8 +52,8 @@ document.addEventListener("DOMContentLoaded", () => {
     form.addEventListener("submit", (event) => {
         event.preventDefault()
         let li = document.createElement("li")
-        li.innerText = review.value
-        revList.appendChild(li)
+        li.innerText = reviewSubmission.value
+        reviewList.appendChild(li)
         form.reset()
     })
 
