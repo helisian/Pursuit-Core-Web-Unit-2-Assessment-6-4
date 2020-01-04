@@ -22,7 +22,9 @@ html {
 body {
     height: 100%;
     width: 100%;
-    background-color: lavender;
+    background-image: url(./GhibliStickerPack.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat; 
     display: grid;
     grid-template-rows: 1fr 4fr;
     grid-template-columns: 1fr;
@@ -39,7 +41,9 @@ body {
     grid-area: header;
     min-width: 70%;
     position: relative;
-    background-color: skyblue;
+    background: rgba(100,181,246 ,0.80);
+    border: 0.2em solid white;
+    color: black;
     height: 150px;
     display: flex;
     flex-direction: row;
@@ -91,6 +95,13 @@ h1 {
     justify-content: left;
 }
 
+.movie, .reviews {
+    background: rgba(100,181,246 ,0.90);
+    color: black;
+    border: 0.2em solid white;
+    padding: 10px;
+}
+
 .select {
     font-family: 'Roboto Condensed', sans-serif;
     margin-bottom: 20px;
@@ -99,7 +110,11 @@ h1 {
 }
 
 .form {
-    margin: 20px 0px 20px 0px;
+    margin: 40px 0px 20px 0px;
+}
+
+.form:focus-within {
+
 }
 
 #reviewSubmission {
@@ -115,9 +130,10 @@ h1 {
     font-weight: bold;
     display: inline-block;
     margin: 0 auto;
-    color: white;
+    color: black;
     background-color: skyblue;
     border: 0.2em solid white;
+    border-radius: 20%;
     transition: all 0.5s;
     box-sizing: border-box;
     height: 2em;
@@ -129,26 +145,26 @@ h1 {
 #submit:hover{
     box-shadow: 0 0 2em rgba(0,0,0,0.1), inset 0 0 1em rgba(0,0,0,0.1);
     background: linear-gradient(skyblue,lavender);
-    color: black
+    color: white
 }
 
-#submit:focus {
+#submit:focus, input:focus, select:focus {
     outline: none;
     border: black dashed;
 }
 
-.reviews {
-    margin-top: 20px;
-}
-
 h2 {
-    margin-bottom: 10px;
     font-size: 28px;
     font-weight: bold
 }
 
 .reviewList {
+    /* margin-top: 10px; */
     margin-left: 40px;
+}
+
+.reviewList:first-child {
+    margin-top: 10px;
 }
 
 .reviewList > li {

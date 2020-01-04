@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     
+    let database = document.createElement("ul")
+
     let select = document.querySelector(".select")
     let form = document.querySelector(".form")
     let reviewSubmission = document.querySelector("#reviewSubmission")
@@ -51,10 +53,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     form.addEventListener("submit", (event) => {
         event.preventDefault()
-        let li = document.createElement("li")
-        li.innerText = reviewSubmission.value
-        reviewList.appendChild(li)
-        form.reset()
+        if (title.innerText !== ""){
+            let li = document.createElement("li")
+            li.innerText = reviewSubmission.value
+            reviewList.appendChild(li)
+            li.setAttribute("class", title.innerText)
+            // database.appendChild(li)
+            form.reset()
+        }
     })
 
 })
