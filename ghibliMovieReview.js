@@ -5,7 +5,10 @@ document.addEventListener("DOMContentLoaded", () => {
     let select = document.querySelector(".select")
     let form = document.querySelector(".form")
     let reviewSubmission = document.querySelector("#reviewSubmission")
-    let reviewList = document.querySelector(".reviewList")
+    let reviews = document.querySelector(".reviews")
+    let reviewList = document.createElement("ul")
+    reviewList.setAttribute("class", "reviewList")
+
     let title = document.querySelector("#title")
     let release = document.querySelector("#release")
     let description = document.querySelector("#description")
@@ -58,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
             li.innerText = reviewSubmission.value
             reviewList.appendChild(li)
             li.setAttribute("class", title.innerText)
-            // database.appendChild(li)
+            reviews.appendChild(reviewList)
             form.reset()
         }
     })
