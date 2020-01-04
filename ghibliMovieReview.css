@@ -120,8 +120,9 @@ h1 {
 #reviewSubmission {
     font-family: 'Roboto Condensed', sans-serif;
     width: 400px;
-    line-height: 2em;
+    line-height: 1.5em;
     font-size: 18px;
+    border: 0.2em solid skyblue
 }
 
 #submit {
