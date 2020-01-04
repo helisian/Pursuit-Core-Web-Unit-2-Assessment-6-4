@@ -56,14 +56,14 @@ document.addEventListener("DOMContentLoaded", () => {
     form.addEventListener("submit", (event) => {
         event.preventDefault()
         if (title.innerText !== ""){
-            let liTitle = document.createElement("li")
-            let liReview = document.createElement("li")
-            let ul = document.createElement("ul")
+            let liTitle = document.createElement("p")
+            let liReview = document.createElement("p")
+            let li = document.createElement("li")
             liTitle.innerText = title.innerText
             liReview.innerText = reviewSubmission.value
-            ul.appendChild(liTitle)
-            ul.appendChild(liReview)
-            reviewList.appendChild(ul)
+            li.appendChild(liTitle)
+            li.appendChild(liReview)
+            reviewList.appendChild(li)
             liTitle.setAttribute("class", "reviewMovieTitle")
             liReview.setAttribute("class", title.innerText)
             reviews.appendChild(reviewList)

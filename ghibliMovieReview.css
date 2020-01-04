@@ -110,8 +110,8 @@ h1 {
 
 #reviewSubmission, .select {
     font-family: 'Roboto Condensed', sans-serif;
-    width: 400px;
     line-height: 1.5em;
+    width: 400px;
     font-size: 18px;
     border: 0.2em solid skyblue;
 }
