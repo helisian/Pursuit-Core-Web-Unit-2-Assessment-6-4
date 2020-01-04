@@ -41,16 +41,12 @@ body {
     grid-area: header;
     min-width: 70%;
     position: relative;
-    background: rgba(100,181,246 ,0.80);
-    border: 0.2em solid white;
-    color: black;
     height: 150px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 40px;
-    padding: 10px;
 }
 
 .title {
@@ -68,7 +64,8 @@ h1 {
     display: inline-block;
     white-space: nowrap;
     text-align: center;
-    font-size: 30px;
+    font-size: 40px;
+    font-weight: bold;
 }
 
 .logo {
@@ -95,7 +92,7 @@ h1 {
     justify-content: left;
 }
 
-.movie, .reviews {
+.movie, .reviews, .header {
     background: rgba(100,181,246 ,0.90);
     color: black;
     border: 0.2em solid white;
@@ -109,12 +106,12 @@ h1 {
     font-size: 18px;
 }
 
-.form {
-    margin: 40px 0px 20px 0px;
-}
-
 #title {
     font-weight: bold;
+}
+
+.form {
+    margin: 40px 0px 20px 0px;
 }
 
 #reviewSubmission {
