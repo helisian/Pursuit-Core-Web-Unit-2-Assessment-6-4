@@ -38,7 +38,6 @@ document.addEventListener("DOMContentLoaded", () => {
         title.innerText = ""
         release.innerText = ""
         description.innerText = ""
-        reviewList.innerText = ""
         movieInfo(event.currentTarget.value)
     })
 
@@ -57,10 +56,16 @@ document.addEventListener("DOMContentLoaded", () => {
     form.addEventListener("submit", (event) => {
         event.preventDefault()
         if (title.innerText !== ""){
-            let li = document.createElement("li")
-            li.innerText = reviewSubmission.value
-            reviewList.appendChild(li)
-            li.setAttribute("class", title.innerText)
+            let liTitle = document.createElement("li")
+            let liReview = document.createElement("li")
+            let ul = document.createElement("ul")
+            liTitle.innerText = title.innerText
+            liReview.innerText = reviewSubmission.value
+            ul.appendChild(liTitle)
+            ul.appendChild(liReview)
+            reviewList.appendChild(ul)
+            liTitle.setAttribute("class", "reviewMovieTitle")
+            liReview.setAttribute("class", title.innerText)
             reviews.appendChild(reviewList)
             form.reset()
         }

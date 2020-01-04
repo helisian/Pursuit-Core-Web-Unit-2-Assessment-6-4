@@ -15,13 +15,12 @@ html {
     margin: 0;
     padding: 0;
     height: 100vh;
-    width: 100vw;
     /* overflow: hidden - Allow for overflow of Reviews */
 }
 
 body {
     height: 100%;
-    width: 100%;
+    margin: 0px;
     background-image: url(./GhibliStickerPack.jpg);
     background-size: 100%;
     background-repeat: no-repeat; 
@@ -46,6 +45,7 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    margin-top: 10px;
     margin-bottom: 40px;
 }
 
@@ -100,26 +100,20 @@ h1 {
 }
 
 .select {
-    font-family: 'Roboto Condensed', sans-serif;
     margin-bottom: 20px;
     height: 30px;
-    font-size: 18px;
-}
-
-#title {
-    font-weight: bold;
 }
 
 .form {
     margin: 40px 0px 20px 0px;
 }
 
-#reviewSubmission {
+#reviewSubmission, .select {
     font-family: 'Roboto Condensed', sans-serif;
     width: 400px;
     line-height: 1.5em;
     font-size: 18px;
-    border: 0.2em solid skyblue
+    border: 0.2em solid skyblue;
 }
 
 #submit {
@@ -160,11 +154,17 @@ h2 {
     margin-left: 40px;
 }
 
-.reviewList > :first-child {
-    margin-top: 10px;
+.reviewMovieTitle, #title {
+    font-size: 20px;
+    font-weight: bold
 }
 
-.reviewList > li {
+.reviewMovieTitle {
+    margin-top: 10px
+}
+
+.reviewList {
     list-style: square;
     list-style-position: inside
 }
+
