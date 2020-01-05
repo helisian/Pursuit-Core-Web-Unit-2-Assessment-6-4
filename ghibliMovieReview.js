@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     form.addEventListener("submit", (event) => {
         event.preventDefault()
-        if (title.innerText !== ""){
+        if (title.innerText !== "" && reviewSubmission.value !==""){
             let liTitle = document.createElement("p")
             let liReview = document.createElement("p")
             let li = document.createElement("li")

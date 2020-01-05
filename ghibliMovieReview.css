@@ -140,9 +140,9 @@ h1 {
     color: white
 }
 
-#submit:focus, input:focus, select:focus {
+*:focus {
     outline: none;
-    border: black dashed;
+    border: 0.2em solid black;
 }
 
 h2 {
